@@ -1,0 +1,16 @@
+replicaCount: 1
+
+image:
+  repository: react-todo-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+app:
+  name: todo-frontend
+  containerPort: 80
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 80
+  nodePort: 30080
